@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= name %> - Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="custom-cursor"></div>
+
+    <div class="portfolio-container">
+        <!-- Main Card -->
+        <div class="card" id="portfolio-card">
+            <div class="front">
+                <img src="/images/pfp.png" class="pfp">
+                <h1 class="rgb-name"><%= name %></h1>
+                <p class="typing"><%= about %></p>
+                <div class="links">
+                    <% links.forEach(link => { %>
+                        <a href="<%= link.url %>" target="_blank" title="<%= link.tooltip %>">
+                            <i class="<%= link.icon %>"></i>
+                        </a>
+                    <% }) %>
+                </div>
+            </div>
+            <div class="back">
+                <% skills.forEach(skill => { %>
+                    <div class="skill">
+                        <span><%= skill.name %></span>
+                        <div class="bar">
+                            <div class="fill" data-level="<%= skill.level %>"></div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+
+        <!-- Bible Verse Box -->
+        <div class="bible-box" id="bible-verse">
+            <strong>Daily Verse: <%= bibleVerse.reference %></strong>
+            <p><%= bibleVerse.text %></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
