@@ -83,11 +83,11 @@ app.get('/', (req, res) => {
             { name: 'BuyMeACoffee', url: 'https://www.buymeacoffee.com/xyroine', icon: 'fa-solid fa-mug-hot', tooltip: 'Support me on Buy Me a Coffee!' }
         ],
         skills: [
-            { name: 'Python', level: 90 },
+            { name: 'Python', level: 99 },
             { name: 'Java', level: 80 },
             { name: 'C++', level: 70 },
             { name: 'JavaScript', level: 85 },
-            { name: 'Roblox Lua', level: 80 }
+            { name: 'Roblox Lua', level: 95 }
         ],
         bibleVerse: dailyVerse
     });
